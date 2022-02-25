@@ -1,0 +1,7 @@
+name="sanmuga priyan,"
+age=15
+year=2021
+print("Dear"+" "+name)
+#converting the int to str to concatenate
+print("you have "+str(age)+" days of leave Balance for this")
+print("year("+str(year)+")")
