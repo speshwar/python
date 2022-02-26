@@ -1,0 +1,17 @@
+import math
+
+n = int(input("Enter the n value: "))
+cosques = int(input("Enter the cos value: "))
+exp = int(input("Enter the exponential value: "))
+
+#to find the log value
+ans = math.log2(n)
+print("The log value is: " + str(ans))
+
+#to find the cos value
+cosans = "{:.2f}".format(math.cos(cosques))
+print("The value of cos is: " + str(cosans))
+
+#to find the exp value
+expans = "{:.2f}".format(math.exp(exp))
+print("The log value is: " + str(expans))
