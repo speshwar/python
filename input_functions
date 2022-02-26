@@ -1,0 +1,6 @@
+usr_name=input("Enter a username: ")
+Mail=input("Enter your email: ")
+number=input("Enter your Phone number: ")
+print("Username: "+usr_name)
+print("Email: "+Mail)
+print("Phone nuber: "+number)
