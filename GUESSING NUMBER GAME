@@ -1,0 +1,16 @@
+import random
+
+#declaration
+ans = random.randint(1, 30)
+num = ' '
+
+#checking using loop
+while not num == ans:
+    num = int(input("Enter the number: "))
+    if num > ans:
+        print("you are going beyond")
+    elif num < ans:
+        print("yep! you came closer")
+
+#execute when answer was found
+print("....wow you've guessed the answer.....")
