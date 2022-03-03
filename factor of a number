@@ -1,0 +1,12 @@
+#input
+inp = int(input("Enter the number to find the factor: "))
+
+#operations
+i = 1
+print("The factors of " + str(inp) + " is: ")
+while i <= inp:
+    if inp % i == 0:
+        print(i)
+        
+    #to increment the i value
+    i += 1
