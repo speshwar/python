@@ -1,0 +1,14 @@
+array = [3, 10, 4, 60, 15, 2]
+
+#functions
+for i in range(0, 5):
+    if array[i] < array[i+1]:
+        print("")
+    else:
+        temp = array[i]
+        array[i] = array[i+1]
+        array[i+1] = temp
+
+print("The array elements are: " + str(array))
+ans = array.pop(5)
+print("The peak element is " + str(ans))
