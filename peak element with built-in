@@ -1,0 +1,9 @@
+array = [3, 10, 4, 60, 15, 2, 5]
+
+print("The array elements are: " + str(array))
+
+#functions
+array.sort()
+
+ans = array.pop(6)
+print("The peak element is " + str(ans))
