@@ -1,0 +1,30 @@
+x = int(input("Enter rows: "))
+y = int(input("Enter columns: "))
+
+a = []
+for i in range(x):
+    t = []
+    for j in range(y):
+        val = int(input(f"Enter value for a[{i} {j}]: "))
+        t.append(val)
+    a.append(t)
+
+b = []
+for i in range(x):
+    t = []
+    for j in range(y):
+        val = int(input(f"Enter value for b[{i} {j}]: "))
+        t.append(val)
+    b.append(t)
+
+add = []
+for i in range(x):
+    t = []
+    for j in range(y):
+        val = a[i][j] + b[i][j]
+        t.append(val)
+    add.append(t)
+
+print(a)
+print(b)
+print(add)
