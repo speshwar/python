@@ -1,0 +1,123 @@
+class Library:
+    def __init__(self,lists):
+        self.books_list = lists
+        # Here [:] declared bcoz during update books_list also updates
+        #To avoid it it has been declared
+        self.available_books = lists[:]
+        self.books_lent = {}
+        
+    def display_available_books(self):
+        for book in self.available_books:
+            print(book)
+            
+    def display_all_books(self):
+        for book in self.books_list:
+            print(book)
+            
+    def lend_book(self,name,book):
+        if book not in self.books_list:
+            print("Sorry the book is not available!")
+        if book in self.available_books:
+            self.books_lent.update({book:name})
+            self.available_books.remove(book)
+            print("Thank you Have a nice day..!")
+        else:
+            print(f"Sorry Your book is been taken by {self.books_lent[book]}")
+    
+    def return_book(self,book):
+        if book not in self.books_list:
+            print("Sorry this book Doesn't belongs to Our library")
+        elif book in self.books_list:
+            del self.books_lent[book]
+            self.available_books.append(book)
+            print(f"Thank you for returning '{book}'.")
+        else:
+            print("This book was not borrowed.")
+
+if __name__ == "__main__":
+    lib = Library(["Batman: The Long Halloween","The Walking Dead","Sin City","Preacher",
+    "Kingdom Come","V For Vendetta","Green Lantern: Rebirth","Supergirl: Woman of Tomorrow","The Immortal Hulk"])
+    print("Welcome to Library...! Kindly select an option")
+    while True:
+        print("1.Display available books")
+        print("2.Display all books")
+        print("3.Borrow a book")
+        print("4.Return a book")
+        print("5.Quit")
+        user_choice = int(input("Enter an Option: "))
+        if user_choice == 1:
+            lib.display_available_books()
+        elif user_choice == 2:
+            lib.display_all_books()
+        elif user_choice == 3:
+            name = input("Enter your name: ")
+            book = input("Enter book name: ")
+            lib.lend_book(name,book)
+        elif user_choice == 4:
+            book = input("Enter book name: ")
+            lib.return_book(book)
+        elif user_choice == 5:
+            break
+        else:
+            print("Invalid syntax")class Library:
+    def __init__(self,lists):
+        self.books_list = lists
+        # Here [:] declared bcoz during update books_list also updates
+        #To avoid it it has been declared
+        self.available_books = lists[:]
+        self.books_lent = {}
+        
+    def display_available_books(self):
+        for book in self.available_books:
+            print(book)
+            
+    def display_all_books(self):
+        for book in self.books_list:
+            print(book)
+            
+    def lend_book(self,name,book):
+        if book not in self.books_list:
+            print("Sorry the book is not available!")
+        if book in self.available_books:
+            self.books_lent.update({book:name})
+            self.available_books.remove(book)
+            print("Thank you Have a nice day..!")
+        else:
+            print(f"Sorry Your book is been taken by {self.books_lent[book]}")
+    
+    def return_book(self,book):
+        if book not in self.books_list:
+            print("Sorry this book Doesn't belongs to Our library")
+        elif book in self.books_list:
+            del self.books_lent[book]
+            self.available_books.append(book)
+            print(f"Thank you for returning '{book}'.")
+        else:
+            print("This book was not borrowed.")
+
+if __name__ == "__main__":
+    lib = Library(["Batman: The Long Halloween","The Walking Dead","Sin City","Preacher",
+    "Kingdom Come","V For Vendetta","Green Lantern: Rebirth","Supergirl: Woman of Tomorrow","The Immortal Hulk"])
+    print("Welcome to Library...! Kindly select an option")
+    while True:
+        print("1.Display available books")
+        print("2.Display all books")
+        print("3.Borrow a book")
+        print("4.Return a book")
+        print("5.Quit")
+        user_choice = int(input("Enter an Option: "))
+        if user_choice == 1:
+            lib.display_available_books()
+        elif user_choice == 2:
+            lib.display_all_books()
+        elif user_choice == 3:
+            name = input("Enter your name: ")
+            book = input("Enter book name: ")
+            lib.lend_book(name,book)
+        elif user_choice == 4:
+            book = input("Enter book name: ")
+            lib.return_book(book)
+        elif user_choice == 5:
+            break
+        else:
+            print("Invalid syntax")
